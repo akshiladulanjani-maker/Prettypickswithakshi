@@ -32,10 +32,12 @@
         a.href = p.link;
         a.target = '_blank';
         a.rel = 'sponsored nofollow noopener';
+        var m = document.createElement('span'); m.className = 'media';
         var img = document.createElement('img');
         img.src = p.image; img.alt = p.title; img.loading = 'lazy';
+        m.appendChild(img);
         var h = document.createElement('h3'); h.textContent = p.title;
-        a.appendChild(img); a.appendChild(h);
+        a.appendChild(m); a.appendChild(h);
         if (p.price) {
           var pr = document.createElement('span'); pr.className = 'price'; pr.textContent = p.price;
           a.appendChild(pr);
@@ -44,5 +46,39 @@
       });
       box.hidden = false;
     }
+  }
+
+  // Header shadow on scroll
+  var header = document.querySelector('.site-header');
+  // Reading progress bar on articles
+  var art = document.querySelector('.article');
+  var bar = null;
+  if (art) { bar = document.createElement('div'); bar.className = 'progress'; document.body.appendChild(bar); }
+  function onScroll() {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 8);
+    if (bar) {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (h > 0 ? Math.min(100, window.scrollY / h * 100) : 0) + '%';
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Gentle reveal as things scroll into view
+  var items = document.querySelectorAll('.card, .product, .tag, .shop-box, .about-strip > *, .section-head');
+  items.forEach(function (el) {
+    el.classList.add('reveal');
+    var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.setProperty('--i', Math.min(sibs, 5));
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
   }
 })();

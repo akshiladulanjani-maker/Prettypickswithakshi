@@ -65,7 +65,7 @@
   onScroll();
 
   // Gentle reveal as things scroll into view
-  var items = document.querySelectorAll('.card, .product, .tag, .shop-box, .about-strip > *, .section-head');
+  var items = document.querySelectorAll('.card, .product, .pick, .panel, .feat, .shop-box, .picks-intro > *, .about-strip > *');
   items.forEach(function (el) {
     el.classList.add('reveal');
     var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;

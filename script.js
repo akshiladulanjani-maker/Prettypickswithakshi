@@ -32,19 +32,25 @@
     var m = document.createElement('a');
     m.className = 'pc-media';
     m.href = p.link; m.target = '_blank'; m.rel = 'sponsored nofollow noopener';
-    m.setAttribute('aria-label', (p.title || 'Product') + ' on Amazon');
+    m.setAttribute('aria-label', (p.title || 'Product'));
     m.tabIndex = -1;
-    if (p.image) {
-      var img = document.createElement('img');
-      img.src = p.image; img.alt = p.title || ''; img.loading = 'lazy';
-      img.onerror = function () { img.style.display = 'none'; };
-      m.appendChild(img);
-      if (p.badge) m.appendChild(text('pc-badge', p.badge));
-    } else {
+    function placeholder() {
       var ph = document.createElement('span');
       ph.className = 'ph ph-' + (p.category || 'x');
       ph.appendChild(text('ph-text', p.badge || CATNAMES[p.category] || ''));
-      m.appendChild(ph);
+      return ph;
+    }
+    if (p.image) {
+      var img = document.createElement('img');
+      img.src = p.image; img.alt = p.title || ''; img.loading = 'lazy';
+      var badge = p.badge ? text('pc-badge', p.badge) : null;
+      img.onerror = function () {
+        if (img.parentNode === m) { m.replaceChild(placeholder(), img); if (badge && badge.parentNode === m) m.removeChild(badge); }
+      };
+      m.appendChild(img);
+      if (badge) m.appendChild(badge);
+    } else {
+      m.appendChild(placeholder());
     }
     var body = document.createElement('div'); body.className = 'pc-body';
     body.appendChild(text('label', p.store || CATNAMES[p.category] || ''));
@@ -54,7 +60,7 @@
     var b = document.createElement('a');
     b.className = 'btn pc-btn';
     b.href = p.link; b.target = '_blank'; b.rel = 'sponsored nofollow noopener';
-    b.appendChild(document.createTextNode((p.button || 'Shop on Amazon') + ' '));
+    b.appendChild(document.createTextNode((p.button || 'Shop now') + ' '));
     var arr = document.createElement('span'); arr.setAttribute('aria-hidden', 'true'); arr.textContent = '\u2192';
     b.appendChild(arr);
     body.appendChild(b);

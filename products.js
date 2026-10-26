@@ -1,19 +1,51 @@
-// ADD YOUR PRODUCTS HERE.
-// Each product needs: title, category, price (optional), image, link.
-// category must be one of: fashion, beauty, home-bedroom, gifts, lifestyle
-// A product only shows on the site when its link starts with http (your real affiliate link)
-// and its image is a real photo of that product.
+// YOUR SHOP PRODUCTS. One block per product.
 //
-// Copy this block, remove the // marks, and fill it in:
+// title:       product name
+// category:    fashion, beauty, home-bedroom, gifts or lifestyle (exactly like that)
+// badge:       small label such as "Glow Pick" (optional)
+// description: one short line about why you like it (optional)
+// button:      button text (optional, default is "Shop on Amazon")
+// link:        your Amazon affiliate link (must start with https://)
+// image:       optional photo link. Only use images you are allowed to use
+//              (your own photos or graphics). Without one, the card shows a pretty badge panel.
 //
-// {
-//   title: "Product name",
-//   category: "fashion",
-//   price: "$39",
-//   image: "https://... (real product photo URL)",
-//   link: "https://... (your affiliate link)"
-// },
+// Prices are left out on purpose: Amazon does not allow static prices on affiliate sites.
 
 window.PRODUCTS = [
-
+  {
+    title: "Blue Shirt Outfits",
+    category: "fashion",
+    badge: "Style Edit",
+    description: "A collection of blue shirts and blouses, from relaxed oversized button-downs to silky styles. Blue works almost like a neutral, so it is easy to wear and easy to match.",
+    button: "Browse on Amazon",
+    link: "https://amzn.to/4yDhkio"
+  },
+  {
+    title: "Rare Beauty Soft Pinch Cheek & Lip Trio",
+    category: "beauty",
+    badge: "Glow Pick",
+    description: "A matte blush, a mini liquid blush and a mini tinted lip oil in one set. An easy way to add a soft pop of colour.",
+    link: "https://amzn.to/4rYDHfy"
+  },
+  {
+    title: "Modern Ceramic Table Lamps, Set of 2",
+    category: "home-bedroom",
+    badge: "Cozy Pick",
+    description: "A white ceramic pair for bedside tables, desks and side tables. Warm light makes a bedroom feel calmer straight away.",
+    link: "https://amzn.to/4ziubX6"
+  },
+  {
+    title: "Birthday Gift Box for Women (Daisy)",
+    category: "gifts",
+    badge: "Gift Idea",
+    description: "A ready-made birthday box for a sister, a best friend or a daughter. Thoughtful, pretty and no wrapping needed.",
+    link: "https://amzn.to/4ycpsFG"
+  },
+  {
+    title: "Bloom Daily Planners 2027 Planner, Moody Floral",
+    category: "lifestyle",
+    badge: "Planner Pick",
+    description: "A weekly and monthly 2027 planner with a stencil and stickers, in a moody floral cover. Perfect for a fresh start to the year.",
+    link: "https://amzn.to/4jNQEa3"
+  }
 ];

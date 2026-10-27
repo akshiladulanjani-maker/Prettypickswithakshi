@@ -26,7 +26,7 @@ window.PRODUCTS = [
     category: "beauty",
     badge: "Glow Pick",
     description: "A matte blush, a mini liquid blush and a mini tinted lip oil in one set. An easy way to add a soft pop of colour.",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
+    image: "https://github.com/akshiladulanjani-maker/Prettypickswithakshi/blob/main/Rare%20Beauty%20Soft%20Pinch%20Cheek%20%26%20Lip%20Trio.jpg",
     link: "https://amzn.to/4rYDHfy"
   },
   {
@@ -34,7 +34,7 @@ window.PRODUCTS = [
     category: "home-bedroom",
     badge: "Cozy Pick",
     description: "A white ceramic pair for bedside tables, desks and side tables. Warm light makes a bedroom feel calmer straight away.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+    image: "https://github.com/akshiladulanjani-maker/Prettypickswithakshi/blob/main/Modern%20Ceramic%20Table%20Lamps%2C%20Set%20of%202.jpg",
     link: "https://amzn.to/4ziubX6"
   },
   {
@@ -42,7 +42,7 @@ window.PRODUCTS = [
     category: "gifts",
     badge: "Gift Idea",
     description: "A ready-made birthday box for a sister, a best friend or a daughter. Thoughtful, pretty and no wrapping needed.",
-    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80",
+    image: "https://github.com/akshiladulanjani-maker/Prettypickswithakshi/blob/main/Birthday%20Gift%20Box%20for%20Women%20(Daisy).jpg",
     link: "https://amzn.to/4ycpsFG"
   },
   {

@@ -50,7 +50,7 @@ window.PRODUCTS = [
     category: "lifestyle",
     badge: "Planner Pick",
     description: "A weekly and monthly 2027 planner with a stencil and stickers, in a moody floral cover. Perfect for a fresh start to the year.",
-    image: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=80",
+    image: "https://github.com/akshiladulanjani-maker/Prettypickswithakshi/blob/main/Bloom%20Daily%20Planners%202027%20Planner%2C%20Moody%20Floral.jpg",
     link: "https://amzn.to/4jNQEa3"
   }
 ];

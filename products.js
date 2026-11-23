@@ -26,7 +26,7 @@ window.PRODUCTS = [
     category: "beauty",
     badge: "Glow Pick",
     description: "A matte blush, a mini liquid blush and a mini tinted lip oil in one set. An easy way to add a soft pop of colour.",
-    image: "https://raw.githubusercontent.com/akshiladulanjani-maker/Prettypickswithakshi/main/Rare%20Beauty%20Soft%20Pinch%20Cheek%20%26%20Lip%20Trio.jpg",
+    image: "./Rare%20Beauty%20Soft%20Pinch%20Cheek%20%26%20Lip%20Trio.jpg",
     link: "https://amzn.to/4rYDHfy"
   },
   {

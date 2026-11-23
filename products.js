@@ -18,7 +18,7 @@ window.PRODUCTS = [
     category: "fashion",
     badge: "Style Edit",
     description: "A collection of blue shirts and blouses, from relaxed oversized button-downs to silky styles. Blue works almost like a neutral, so it is easy to wear and easy to match.",
-    image: "https://github.com/akshiladulanjani-maker/Prettypickswithakshi/blob/main/71XguiG5RWL._AC_SY741_.jpg",
+    image: "https://raw.githubusercontent.com/akshiladulanjani-maker/Prettypickswithakshi/main/71XguiG5RWL._AC_SY741_.jpg",
     link: "https://amzn.to/4yDhkio"
   },
   {
